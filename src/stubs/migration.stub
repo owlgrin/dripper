@@ -1,0 +1,74 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateDripperTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('_dripper_subscribers', function(Blueprint $table)
+		{
+			$table->increments('id');
+			$table->string('name', 255);
+			$table->string('email', 255);
+			$table->integer('course_id', 5);
+			$table->string('secret_key', 255);
+			$table->tinyInteger('is_active', 1);
+			$table->tinyInteger('next_lesson_id', 2)->nullable()->default(null);
+			$table->date('next_lesson_on')->nullable()->default(null);
+			$table->dateTime('created_at');
+			$table->dateTime('updated_at');
+			$table->dateTime('unsubscribed_at')->nullable()->default(null);
+			$table->dateTime('completed_at')->nullable()->default(null);
+		});
+
+		Schema::create('_dripper_lessons', function(Blueprint $table)
+		{
+			$table->increments('id');
+			$table->integer('course_id', 5);
+			$table->tinyInteger('sequence', 2);
+			$table->string('name', 255);
+			$table->string('view', 255);
+			$table->tinyInteger('interval', 2);
+			$table->dateTime('created_at');
+			$table->dateTime('updated_at');
+		});
+
+		Schema::create('_dripper_courses', function(Blueprint $table)
+		{
+			$table->increments('id');
+			$table->string('name', 255);
+			$table->dateTime('created_at');
+			$table->dateTime('updated_at');
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::table('_dripper_subscribers', function(Blueprint $table)
+		{
+			$table->drop();
+		});
+
+		Schema::table('_dripper_lessons', function(Blueprint $table)
+		{
+			$table->drop();
+		});
+
+		Schema::table('_dripper_courses', function(Blueprint $table)
+		{
+			$table->drop();
+		});
+	}
+}

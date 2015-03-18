@@ -1,0 +1,20 @@
+{
+    "name": "owlgrin/dripper",
+    "description": "",
+    "authors": [
+        {
+            "name": "Mohit Mamoria",
+            "email": "mohit.mamoria@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Owlgrin\\Dripper": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
