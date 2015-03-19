@@ -30,5 +30,7 @@ return array(
 		 * dripper lessons.
 		 */
 		'lessons' => '_dripper_lessons'
-	)
+	),
+
+	'course' => 'Course ID'
 );
