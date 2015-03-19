@@ -2,6 +2,7 @@
 
 use BaseController;
 use View;
+use Dripper;
 
 /**
  * Dripper Controller
