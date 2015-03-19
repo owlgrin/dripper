@@ -43,11 +43,10 @@ class EloquentLesson implements LessonInterface {
 		}
 		catch(MassAssignmentException $e)
 		{
-			throw new Exceptions\InvalidInputException('Invalid input data.');
+			throw $e;
 		}
 		catch(\Exception $e)
 		{
-			dd($e->getMessage());
 			throw new Exceptions\InternalException;
 		}
 	}

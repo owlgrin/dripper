@@ -82,11 +82,11 @@ class EloquentSubscriber implements SubscriberInterface {
 		}
 		catch(Exceptions\NotFoundException $e)
 		{
-			throw new Exceptions\NotFoundException($e->getMessage());
+			throw $e;
 		}
 		catch(MassAssignmentException $e)
 		{
-			throw new Exceptions\InvalidInputException('Invalid input data.');
+			throw $e;
 		}
 		catch(\Exception $e)
 		{
@@ -111,11 +111,11 @@ class EloquentSubscriber implements SubscriberInterface {
 		}
 		catch(Exceptions\NotFoundException $e)
 		{
-			throw new Exceptions\NotFoundException($e->getMessage());
+			throw $e;
 		}
 		catch(MassAssignmentException $e)
 		{
-			throw new Exceptions\InvalidInputException('Invalid input data.');
+			throw $e;
 		}
 		catch(\Exception $e)
 		{
@@ -137,7 +137,7 @@ class EloquentSubscriber implements SubscriberInterface {
 		}
 		catch(Exceptions\NotFoundException $e)
 		{
-			throw new Exceptions\NotFoundException($e->getMessage());
+			throw $e;
 		}
 		catch(MassAssignmentException $e)
 		{
@@ -166,11 +166,11 @@ class EloquentSubscriber implements SubscriberInterface {
 		}
 		catch(Exceptions\NotFoundException $e)
 		{
-			throw new Exceptions\NotFoundException($e->getMessage());
+			throw $e;
 		}
 		catch(MassAssignmentException $e)
 		{
-			throw new Exceptions\InvalidInputException('Invalid input data.');
+			throw $e;
 		}
 		catch(\Exception $e)
 		{
