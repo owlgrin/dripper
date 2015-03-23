@@ -14,6 +14,8 @@ return array(
 		'email' => 'Sender-Email'
 	),
 
+	'url' => 'Dripper Domain',
+
 	'tables' => array(
 		/**
 		 * This table is required to keep track of the
