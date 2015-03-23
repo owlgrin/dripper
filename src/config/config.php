@@ -14,7 +14,8 @@ return array(
 		'email' => 'Sender-Email'
 	),
 
-	'url' => 'Dripper Domain',
+	// http://mail.example.com
+	'url' => null,
 
 	'tables' => array(
 		/**

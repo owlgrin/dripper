@@ -87,6 +87,8 @@ class DripperSendCommand extends Command {
 
 	private function getUnsubscribeLink(Subscriber $subscriber)
 	{
+		if( is_null($url = Config::get('dripper::url'))) return '#';
+
 		return Config::get('dripper::url') . '/unsubscribe/' . $subscriber->id . '/' . $subscriber->secret_key;
 	}
 
