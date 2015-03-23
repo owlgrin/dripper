@@ -14,6 +14,9 @@ return array(
 		'email' => 'Sender-Email'
 	),
 
+	// http://mail.example.com
+	'url' => null,
+
 	'tables' => array(
 		/**
 		 * This table is required to keep track of the

@@ -87,7 +87,9 @@ class DripperSendCommand extends Command {
 
 	private function getUnsubscribeLink(Subscriber $subscriber)
 	{
-		return Config::get('horntell.url.mail') . '/unsubscribe/' . $subscriber->id . '/' . $subscriber->secret_key;
+		if( is_null($url = Config::get('dripper::url'))) return '#';
+
+		return Config::get('dripper::url') . '/unsubscribe/' . $subscriber->id . '/' . $subscriber->secret_key;
 	}
 
 	/**
