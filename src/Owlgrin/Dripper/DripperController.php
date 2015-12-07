@@ -1,13 +1,13 @@
 <?php namespace Owlgrin\Dripper;
 
-use BaseController;
+use Illuminate\Routing\Controller;
 use View;
 use Dripper;
 
 /**
  * Dripper Controller
  */
-class DripperController extends BaseController {
+class DripperController extends Controller {
 
 	public function unsubscribe($id, $key)
 	{
